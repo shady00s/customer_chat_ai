@@ -1,1 +1,2 @@
-/.env 
+app/.env 
+app/{query.model}_answers.csv

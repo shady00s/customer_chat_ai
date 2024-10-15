@@ -7,5 +7,6 @@ systemMessage = f"""
         - message key which contains a user friendly messages you created. 
         - reason key which contains the reason why the user message is not relavent.
         - re-ask key that contains the question that what assistant need to reask.
+        - filterQuery key that contains the filter query for products or categories that is suitable for PostgresSql database as string.
     Assistant responses must be in JSON format with the given keys only and not empty object and all empty keys must return as empty string.
     """
