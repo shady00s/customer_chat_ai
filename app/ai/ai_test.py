@@ -35,7 +35,7 @@ async def chat(query: Test):
                     {"role": "system", "content": systemMessage},
                     {
                         "role": "assistant",
-                        "content": chat_ai_instructions_2,
+                        "content": chat_bot_instructions,
                     },
                     {"role": "user", "content": question},
                 ],
