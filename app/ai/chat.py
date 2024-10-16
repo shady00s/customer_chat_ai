@@ -4,8 +4,9 @@ from ast import literal_eval as evall
 from constants import AppConstants
 import requests
 
-from ai_commands.service_messages.check_for_available import (
-    check_for_available_products_service,
+from ai_commands.chat_assistant.ai_bot_instruction import (
+    chat_ai_instructions_2,
+    chat_bot_instructions
 )
 
 aiRouter = APIRouter()
@@ -22,7 +23,7 @@ async def chat(text: str):
             "options": {"temprature": 0.1},
             "messages": [
                 {"role": "system", "content": systemMessage},
-                {"role": "assistant", "content": check_for_available_products_service},
+                {"role": "assistant", "content": chat_bot_instructions},
                 {"role": "user", "content": text},
             ],
             "stream": False,

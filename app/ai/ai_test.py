@@ -6,8 +6,9 @@ from constants import AppConstants
 import requests
 
 from utils.json_object_converter_to_csv import json_object_to_csv_file
-from ai_commands.service_messages.check_for_available import (
-    check_for_available_products_service,
+from ai_commands.chat_assistant.ai_bot_instruction import (
+    chat_ai_instructions_2,
+    chat_bot_instructions
 )
 
 aiTestRouter = APIRouter()
@@ -34,7 +35,7 @@ async def chat(query: Test):
                     {"role": "system", "content": systemMessage},
                     {
                         "role": "assistant",
-                        "content": check_for_available_products_service,
+                        "content": chat_ai_instructions_2,
                     },
                     {"role": "user", "content": question},
                 ],
