@@ -6,13 +6,12 @@ from constants import AppConstants
 import requests
 
 from utils.json_object_converter_to_csv import json_object_to_csv_file
-from ai_commands.chat_assistant.ai_bot_instruction import (
+from ai_prompts.chat_assistant.ai_bot_assistant_instruction import (
     chat_ai_instructions_2,
-    chat_bot_instructions
-)
+ )
 
 aiTestRouter = APIRouter()
-from ai_commands.system_messages.message import systemMessage
+from ai_prompts.system_messages.message import systemMessage
 
 
 class Test(BaseModel):
